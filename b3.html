@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 3</title>
+    </head>
+    <body>
+        <script>
+            var n = parseInt(prompt("Nhập số phần tử: "));
+            var arr = [];
+            for (var i = 0; i < n; i++)
+                arr[i] = prompt("Nhập phần tử số " + i + ": ");
+            var dem = 0;
+            var x = prompt("Nhập giá trị cần tìm: ");
+            var check = false;
+            for (var i = 0; i < arr.length; ++i) {
+                document.write(arr[i] + (i < arr.length - 1 ? ", " : ""));
+                if (arr[i] === x) {
+                    dem++;
+                    check = true;
+                }
+            }
+            document.write(`<br>`);
+            if (!check) document.write(x + " không tồn tại trong mảng!");
+            else
+                document.write(
+                    "Phần tử " + x + " có " + dem + " phần tử trong mảng!"
+                );
+        </script>
+    </body>
+</html>

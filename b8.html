@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 8</title>
+    </head>
+    <body>
+        <script>
+            var n = parseInt(prompt("Nhập số phần tử: "));
+            var arr = [];
+            for (var i = 0; i < n; i++)
+                arr[i] = parseInt(prompt("Nhập phần tử số " + i + ": "));
+            var check = false;
+            var save = [];
+            document.write(arr + `<br>`);
+            for (var i = 0; i < arr.length; i++) {
+                var dem = 1;
+                if (!save.includes(arr[i])) {
+                    for (var j = i + 1; j < arr.length; ++j)
+                        if (arr[i] === arr[j]) {
+                            dem++;
+                        }
+                    if (dem >= 2) {
+                        document.write(
+                            arr[i] + " xuất hiện " + dem + " lần!" + `<br>`
+                        );
+                        check = true;
+                        save.push(arr[i]);
+                    }
+                }
+            }
+            if (arr.length === 0) document.write("Mảng chưa có phần tử nào");
+            else if (!check)
+                document.write("Không có phần xuất hiện hơn 2 lần!");
+            else {
+            }
+        </script>
+    </body>
+</html>

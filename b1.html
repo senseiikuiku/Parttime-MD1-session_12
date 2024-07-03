@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 1</title>
+    </head>
+    <body>
+        <script>
+            var n = prompt("Nhập số phần tử: ");
+            var arr = [];
+            for (var i = 0; i < n; i++)
+                arr[i] = parseInt(prompt("Nhập phần tử " + i + ": "));
+
+            var check = false;
+            for (var num of arr) {
+                if (Number.isInteger(num)) {
+                    document.write(num + " ");
+                    check = true;
+                }
+            }
+            if (!check) document.write("Trong mảng không tồn tại số nguyên!");
+        </script>
+    </body>
+</html>

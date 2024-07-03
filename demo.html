@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo</title>
+    </head>
+    <body>
+        <script>
+            var n = prompt("Nhập n: ");
+            var arr = [];
+            for (var i = 1; i <= n; i++) {
+                var tamp = prompt("Nhập NYC số: " + i);
+                arr.push(tamp);
+            }
+
+            for (var i = 0; i < arr.length; ++i) {
+                document.write(arr[i] + (i < arr.length - 1 ? ", " : ""));
+            }
+
+            document.write(`<br>`);
+            var name = prompt("Nhập lên người yêu cũ: ");
+
+            var found = false;
+            for (var i = 0; i < arr.length; ++i) {
+                if (arr[i] == name) {
+                    document.write("Tôi đã từng có NYC tên: " + name);
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                document.write("Tôi không có người yêu cũ tên: " + name);
+            }
+        </script>
+    </body>
+</html>

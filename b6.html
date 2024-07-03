@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 6</title>
+    </head>
+    <body>
+        <script>
+            var n = parseInt(prompt("Nhập số phần tử: "));
+            var arr = [];
+            var result = [];
+            var negative = [];
+            var positive = [];
+            for (var i = 0; i < n; i++)
+                arr[i] = parseInt(prompt("Nhập phần tử số " + i + ": "));
+            document.write(arr);
+            for (var num of arr) {
+                if (num < 0) negative.unshift(num);
+                else if (num > 0) positive.push(num);
+                else negative.push(num);
+            }
+            result = negative.concat(positive);
+            document.write(`<br><br>`);
+            document.write(result.sort((a, b) => a - b));
+        </script>
+    </body>
+</html>
